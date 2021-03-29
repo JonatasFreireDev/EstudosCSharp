@@ -1,0 +1,24 @@
+// inicia o projeto com uma solution(tipo packet.json)
+dotnet new sln -n "vsCodeIntroSln"
+
+// Inicia um projeto de console
+dotnet new console -n "IntroUI"
+
+
+dotnet new classlib -n "IntroLibrary"
+
+PS J:\code\EstudosCSharp> dotnet new classlib -n "IntroLibrary"
+
+
+
+
+//windows
+dotnet sln VSCodeIntroSln.sln add .\IntroUI\IntroUI.csproj
+
+//linux
+dotnet sln VSCodeIntroSln.sln add **/*.csproj
+
+dotnet add .\IntroUI\IntroUI.csproj reference .\IntroLibrary\IntroLibrary.csproj
+
+
+dotnet add package Dapper
